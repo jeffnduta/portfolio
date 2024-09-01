@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<html lang="en">
+<s.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5/2sOVJ/0A6tBRG7vCs5zTzDNZZuVQ20L4qz8zgZI1KoA3VwRJgK4UgKtfe4vRuYBfBTTpOb/AzoyPDSbRqZeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnj">
+    <title>gallery</title>
+    <link rel="stylesheet" href="project.css">
+
+</head>
+<body>
+    <main>
+        <div class="big-wrapper light">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <img src="logo.png" alt="logo">
+                        <h3>Jeff</h3>
+                    </div>
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutme.html">About Me</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                            <li><a href="project.html" class="btn">See my projects</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="overlay"></div>
+
+                        <div class="humbager-menu">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+            </header>
+<!-----------------------------------------------------------------------------------------END OF THE HEADER----------------------------------->
+
+        <!------------------------------------------------------------------------------------------- image navigation -->
+        
+        <div class="wrapper">
+            <nav>
+                <div class="items">
+                    <span class="item active" data-filter="all" onclick="filterSelection('all')">All</span>
+                    <span class="item" data-filter="logos" onclick="filterSelection('logos')">Logos</span>
+                    <span class="item" data-filter="business-cards" onclick="filterSelection('business-cards')">Business Cards</span>
+                    <span class="item" data-filter="web-figma" onclick="filterSelection('web-figma')">Web Designs</span>
+                    <span class="item" data-filter="flyers" onclick="filterSelection('flyers')">Flyers</span>
+                </div>
+            </nav>
+        </div>
+            <!----------------------------------------------------------------------------------- Filtered Images -->
+
+            
+
+
+
+
+
+            <!------------------------------------------------------------------------------------IMAGE PART---------->
+
+            <div class="gallery">
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img3.jpg')"><span><img src="img/img3.jpg" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/entlogo.png')"><span><img src="img/entlogo.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/young.jpeg')"><span><img src="img/young.jpeg" alt=""></span></div> 
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img4.png')"><span><img src="img/img4.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img6.png')"><span><img src="img/img6.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img7.jpg')"><span><img src="img/img7.jpg" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img19.png')"><span><img src="img/img19.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img3.jpg')"><span><img src="img/img3.jpg" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img17.png')"><span><img src="img/img17.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img16.png')"><span><img src="img/img16.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img4.png')"><span><img src="img/img4.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img12.png')"><span><img src="img/img12.png" alt=""></span></div>
+                <div class="image" data-filter="logos" onclick="enlargeImage('img/img14.jpg')"><span><img src="img/img14.jpg" alt=""></span></div>
+
+
+
+
+
+
+
+
+
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/set.jpeg')"><span><img src="img/set.jpeg" alt=""></span></div>
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/img2.jpg')"><span><img src="img/img2.jpg" alt=""></span></div>
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/img21.png')"><span><img src="img/img21.png" alt=""></span></div>
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/img20.jpg')"><span><img src="img/img20.jpg" alt=""></span></div>
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/img22.png')"><span><img src="img/img22.png" alt=""></span></div>
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/set.jpg')"><span><img src="img/set.jpg" alt=""></span></div>
+                <div class="image" data-filter="business-cards" onclick="enlargeImage('img/img20.png')"><span><img src="img/img20.png" alt=""></span></div>
+
+
+
+
+                <div class="image" data-filter="web-figma" onclick="enlargeImage('img/web1.jpg')"><span><img src="img/web1.jpg" alt=""></span></div>
+                <div class="image" data-filter="web-figma" onclick="enlargeImage('img/web2.jpg')"><span><img src="img/web2.jpg" alt=""></span></div>
+                <div class="image" data-filter="web-figma" onclick="enlargeImage('img/web3.jpg')"><span><img src="img/web3.jpg" alt=""></span></div>
+                <div class="image" data-filter="web-figma" onclick="enlargeImage('img/web4.jpg')"><span><img src="img/web4.jpg" alt=""></span></div>
+
+
+                <div class="image" data-filter="flyers" onclick="enlargeImage('img/img10.png')"><span><img src="img/img10.png" alt=""></span></div>
+                <div class="image" data-filter="flyers" onclick="enlargeImage('img/br3.jpg')"><span><img src="img/br3.jpg" alt=""></span></div>
+
+
+            </div>
+            
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+                <span class="next" onclick="plusSlides(1)">&#10095;</span>
+                <div class="modal-content">
+                    <img id="modalImage" alt="">
+                </div>
+            </div>
+
+             <!------------------------------------------------------------------------------------END IMAGE PART---------->
+
+  
+
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------>
+            <div class="bottom-area">
+                <div class="container">
+                    <button class="toggle-btn">
+
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+  <!--javascript files--> 
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>

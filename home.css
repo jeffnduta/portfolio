@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap');
+
+/* Reset and global styles */
+body, *, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh; 
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative; 
+    background-image: url('10.jpg'); 
+    background-size: cover;
+}
+body::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+}
+
+/* Shared styles */
+.light {
+    --maincolor: rgb(57, 235, 161);
+    --hovercolor: rgb(1, 64, 66);
+    --backgroundcolor: white;
+    --darkone: rgb(28, 179, 116);
+    --darktwo: rgb(240, 214, 214);
+    --lightone: rgb(83, 230, 250);
+    --lighttwo: rgb(204, 236, 219); 
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+header {
+    position: relative;
+    z-index: 70;
+    margin-top: 20px;
+}
+
+.big-wrapper {
+    padding: 0 20px; 
+    z-index:4;
+    box-sizing: border-box;
+
+}
+
+
+header .section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu humbager */
+.overlay {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: .6rem;
+    margin-top: -0.6rem;
+}
+
+.logo h3 {
+    color: var(--darktwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.links a {
+    color: var(--lighttwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: var(--hovercolor);
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: white !important;
+    background-color: var(--maincolor);
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: var(--hovercolor);
+    transform: scale(1) !important;
+}
+
+.humbager-menu {
+    position: relative;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.humbager-menu .bar {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: var(--darktwo);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bar::before, .bar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darktwo);
+    border-radius: 3PX;
+    transition: 0.5s;
+}
+
+.bar::before {
+    transform: translateY(-8px);
+}
+
+.bar::after {
+    transform: translateY(8px);
+}
+
+.big-wrapper.active .humbager-menu .bar {
+    background-color: transparent;
+}
+
+.big-wrapper.active .bar::before {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.big-wrapper.active .bar::after {
+    transform: translateY(0) rotate(45deg);
+}
+
+/*---------======================Nav top End=========---------*/
+
+/*-----------------page details------------*/
+
+
+.showcase-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+
+.showcase-area .container {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;   
+}
+
+.big-title {
+    font-size: 1.4rem;
+    color: var(--darkone);
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+span {
+    display: inline-block;
+    text-transform: uppercase;
+    animation: bounce 1s ease-in-out infinite, changeText 4s linear infinite;
+}
+
+.text {
+    color: var(--lightone);
+    font-size: 1.1rem;
+    margin: 1.9rem 0 2.5rem;
+    max-width: 600px;
+    line-height: 2.3;
+}
+
+.showcase-area .btn {
+    box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.05);
+}
+
+.person {
+    z-index: 1;
+
+}
+
+.toggle-btn i {
+    line-height: 39px;
+}
+
+.big-wrapper .light .toggle-btn i:last-child {
+    display: none;
+}
+
+.big-wrapper .light .toggle-btn i:first-child {
+    display: block;
+}
+
+.big-wrapper .dark .toggle-btn i:last-child {
+    display: block;
+}
+
+.big-wrapper .dark .toggle-btn i:first-child {
+    display: none;
+}
+
+.toggle-btn:hover {
+    background: var(--maincolor);
+}
+
+/*---------end of page details-----------*/
+
+
+/*---------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 0.7rem;
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+footer .credits a {
+  color: #fff;
+}
+
+/*--------------=========Responsive area==========------------------*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+.big-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInItem 2s ease-in-out forwards;
+}
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animated-text {
+    font-size: 2.5rem;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .animated-text span {
+    display: inline-block;
+    transform-origin: center bottom;
+    animation: wave 1s ease-in-out infinite;
+    animation-delay: calc(0.2s * var(--index));
+    color: #fff;
+    transition: opacity 1.1s ease-in-out;
+  }
+
+
+@media screen and (max-width: 870px) {
+    .humbager-menu {
+        display: flex;
+    }
+
+    .links {
+        position: fixed;
+        top: 0%;
+        right: 0;
+        max-width: 450px;
+        width: 100%;
+        height: 100%;
+        background-color: var(--maincolor);
+        z-index: 95;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 50px 2px rgba(15, 0, 0, 0.342);
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+
+    .links a {
+        color: white; 
+        margin-left: 0;
+        padding: 2rem 0;
+    }
+
+    .links .btn {
+        background: none;
+    }
+
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.212);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .big-wrapper.active .links {
+        transform: translateX(0);
+        box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.486);
+    }
+
+    .big-wrapper.active .overlay {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .showcase-area {
+        padding: 2.5rem 0;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .showcase-area .container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+
+        max-width: 81rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 3rem;
+    }
+
+    .big-title  h1{
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    .animated-text {
+        font-size: 1.2rem;
+        text-align: center;
+        display: inline-block;
+      }
+
+    .text {
+        font-size: .95rem;
+        margin: 1.4rem 0 1.5rem;
+    }
+
+    .person {
+        width: 100%;
+        transform: none;
+    }
+
+    .logo h3 {
+        font-size: 1.25rem; 
+    }
+
+    .shape {
+        bottom: -180px;
+        left: -150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .big-title {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .text {
+        margin: 1.1em 0 1.5rem;
+    }
+
+    .showcase-area .btn {
+        font-size: 0.8rem;
+    }
+}
+
+

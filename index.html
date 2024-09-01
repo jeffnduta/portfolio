@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+
+    <title>HOME</title>
+</head>
+<body>
+  
+<!-- Messenger Chat plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "211380878717903");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+   
+    <!-- ======= Header ======= -->
+
+    <div class="big-wrapper light">
+       
+     <header>
+            <div class="section">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h3>Jeff</h3>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="contact.html">Contacts</a></li>
+                        <li><a href="project.html" class="btn">See my projects</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="overlay"></div>
+
+                        <div class="humbager-menu toggle-btn">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+               
+    </header>
+  <!--============ End Header=================-->
+
+<!--------------------=====page details======================-->
+
+
+<div class="showcase-area">
+    <div class="container">
+        <div class="left">
+            <div class="big-title">
+                   <h1>Hi, I'm Jeff Nduta a</h1>
+              <h1>
+                <div class="animated-text" id="textContainer">
+                  <span style="--index: 1;"></span>
+                  <span style="--index: 2;"></span>
+                  <span style="--index: 3;"></span>
+                  <span style="--index: 4;"></span>
+                  <span style="--index: 5;"></span>
+                  <span style="--index: 6;"></span>
+                  <span style="--index: 7;"></span>
+                  <span style="--index: 8;"></span>
+                  <span style="--index: 9;"></span>
+                  <span style="--index: 10;"></span>
+                  <span style="--index: 11;"></span>
+                  <span style="--index: 12;"></span>
+                  <span style="--index: 13;"></span>
+                  <span style="--index: 14;"></span>
+                  <span style="--index: 15;"></span>
+                  <span style="--index: 16;"></span>
+                  <span style="--index: 17;"></span>
+                </div>
+
+
+               </h1>
+            </div>
+        <p class="text">
+            A visionary graphic designer & Web designer with a passion for 
+            transforming ideas into visually stunning 
+            realities.
+        </p>
+        <div class="cta">
+            <a href="contact.html" class="btn"> Hire Me</a>
+        </div>
+    </div>
+<div class="right">
+    <img src="webport.png" alt="person image" class="person">
+</div>
+</div>
+</div>
+<!--======================end of page details=====================-->
+
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>2024 </strong>. All Rights Reserved</p>
+            <div class="credits">
+
+              Designed by <a href="#">Jeffnduta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="hex-grid">
+    <div class="light"></div>
+    <div class="grid"></div>
+</div>
+
+
+</div>
+
+
+
+<script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap');
+
+.light {
+    --maincolor: rgb(57, 235, 161);
+    --hovercolor:rgb(1, 64, 66);
+    --backgroundcolor: white;
+    --darkone:rgb(28, 179, 116);
+    --darktwo: rgb(240, 214, 214);
+    --lightone: rgb(83, 230, 250);
+    --lighttwo: rgb(204, 236, 219); 
+}
+
+*, 
+*::before, 
+*::after{
+   
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: #333; /* Dark background color */
+
+}
+
+.stop-scrolling{
+    height :100%;
+    overflow : hidden;
+        
+}
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.big-wrapper {
+    padding: 1.7rem 0 2rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url(nai3.avif);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 0;
+}
+
+header {
+    position: relative;
+    z-index: 70;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 24px;
+}
+
+
+/* menu humbager */
+.overlay {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo img {
+    width: 40px;
+    margin-right: .6rem;
+    margin-top: -0.6rem;
+}
+
+.logo h3 {
+    color: var(--darktwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+
+.links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+.links a {
+    color: var(--lighttwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: var(--hovercolor);
+    transform: scale(1.05);
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: white !important;
+    background-color: var(--maincolor);
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: var(--hovercolor);
+    transform: scale(1) !important;
+}
+
+
+
+
+
+
+/* menu humbager */
+
+
+.humbager-menu {
+    position: relative;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.humbager-menu .bar {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: var(--darktwo);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bar::before, 
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darktwo);
+    border-radius: 3PX;
+    transition: 0.5s;
+}
+
+.bar::before {
+    transform: translateY(-8px);
+}
+
+.bar::after {
+    transform: translateY(8px);
+}
+
+.big-wrapper.active .humbager-menu .bar{
+    background-color: transparent;
+}
+
+.big-wrapper.active .bar::before {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.big-wrapper.active .bar::after {
+    transform: translateY(0) rotate(45deg);
+}
+
+
+.toggle-btn::before {
+    content: none;
+}
+/*---------------------------------------------------- menu humbager end */
+
+   
+
+
+/*-----------------------------------------------------------------------*/
+
+
+
+.intro {
+    color:aqua;
+    background:#0000005c;
+    text-align: center;
+    padding: 50px;
+}
+
+.intro h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.showcase-area {
+    background: rgba(178, 34, 34, 0.651);
+    padding: 50px 0;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.b1, .b2 {
+    color: aliceblue;
+    flex: 1;
+}
+
+.contact-info {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+
+
+.contact-info.align-items-start .icon {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* Create a circular shape */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.contact-info.align-items-start .icon img {
+    width: 100%; /* Make the image fill the circular container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.contact-info.align-items-start .icon:hover img {
+    transform: scale(1.2); /* Increase the size on hover (adjust as needed) */
+}
+
+
+
+
+.text {
+    line-height: 1.6;
+}
+
+form {
+    color: white;
+    background-color:#00000026;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(14, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #666;
+    background-color: #555555ad;
+    color: #fff;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: var(--maincolor);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--hovercolor);
+}
+/*----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  
+    .overlay{
+        display: none;
+    }
+}
+
+
+@media(max-width:1024px){
+    .showcase-area {
+        margin: 20px;
+}
+.b1, .b2 {
+    padding: 20px;
+}
+}
+
+
+
+
+
+
+@media (max-width: 870px) {
+
+    .humbager-menu {
+        display: flex;
+    }
+    
+    .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--maincolor);
+        z-index: 95;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 50px 2px rgba(15, 0, 0, 0.342);
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+
+    .links a {
+        color: white; 
+        margin-left: 0;
+        padding: 2rem 0;
+    }
+
+    .links .btn {
+        margin-top: 20px;
+    }
+
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.212);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .big-wrapper.active .links {
+        transform: translateX(0);
+        box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.486);
+    }
+
+    .big-wrapper.active .overlay {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .b1, .b2 {
+        padding: 20px;
+        color: aliceblue;
+        flex: 1;
+    }
+
+
+
+
+
+
+    .intro {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .cont {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .b1,
+    .b2 {
+        width: 100%; /* Set width to 100% for smaller screens */
+    }
+
+    .contact-info {
+        margin-top: 10px; /* Adjust top margin for smaller screens */
+        margin-bottom: 15px; /* Adjust bottom margin for smaller screens */
+    }
+}
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 608px) {
+
+    .b1, .b2 {
+        padding: 30px;
+        color: aliceblue;
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width:280px){
+    .b1, .b2 {
+        padding: 5px;
+        color: aliceblue;
+        flex: 1;
+        font-size: .8rem;
+    }
+}
